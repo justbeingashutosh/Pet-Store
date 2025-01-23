@@ -1,0 +1,28 @@
+:root{
+    --primary:#f81372;
+    --secondary: #7cfb80;
+    --accent: #47f9de;
+}
+
+.btn{
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    color: rgb(249, 243, 243);
+    height: fit-content;
+    width: fit-content;
+    padding: 1%;
+    box-shadow: 3px 3px 30px white;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease-in 0s;
+}
+
+.btn:hover{
+    box-shadow: -2px 3px 30px white;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
