@@ -4,8 +4,8 @@
     --accent: #47f9de;
 }
 
-.btn{
-    background-color: black;
+.btn, .adopt-btn, .buy{
+    background-color: var(--primary);
     border: none;
     border-radius: 10px;
     color: rgb(249, 243, 243);
@@ -24,5 +24,29 @@
 
 a{
     text-decoration: none;
+}
+
+.section-head{
+   width: 100%;
+   text-align: center;
+   font-family: var(--head-font);
+}
+
+.adopt-btn, .buy{
+    padding: 3%;
+}
+
+.buy{
+    background-color: var(--secondary);
+}
+.pets, .essentials{
+    border-radius: 30px;
+    padding: 3%;
+    transition: transform 0.25s ease-in-out;
+}
+
+.pets:hover, .essentials:hover{
+    box-shadow: 12px 9px 20px 5px gray;
+    transform: scale(1.05);
 }
 

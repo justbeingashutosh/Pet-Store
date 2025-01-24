@@ -19,7 +19,7 @@ body{
     overflow-x: hidden;
 }
 
-nav{
+#nav{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,17 +31,30 @@ nav{
 
 .navelm{
     position: relative;
+    color: var(--primary);
+    font-size: 1.25em;
 }
 
 .navelm::before{
     position: absolute;
-    top: 75%;
-    left: 50%;
-    width: 75%;
-    height: 10%;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20%;
     content:'';
-    background-color: var(--primary);
+    background-color: var(--accent);
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-in, transform 0.2s ease-in;
+
 }
+
+.navelm:hover::before{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .logo{
     position: absolute;
@@ -49,10 +62,12 @@ nav{
     top:0;
     align-self: flex-start;
     height: 100%;
+    width: 20%;
+    object-fit: contain;
 }
 
 #hero{
-    height: 500px;
+    height: 100vh;
     width: 100%;
     position: relative;
     display: flex;
@@ -80,7 +95,7 @@ video{
     z-index: -2;
     position: absolute;
     top:0;
-    left:0;  
+    left:0; 
 }
 
 #title, #slogan{
@@ -90,7 +105,9 @@ video{
 #title{
     font-family: var(--head-font);
     color: white;
-    font-size: 3rem;
+    font-size: 8rem;
+    padding: 0;
+    margin: 0;
 }
 #slogan{
     color: white;
@@ -98,7 +115,7 @@ video{
 }
 
 .dp{
-    width: 100px;
+    aspect-ratio: 1/1;
     height: 100px;
     border-radius: 50%;
     position: relative;
@@ -116,37 +133,55 @@ video{
 #testimonials{
     width: 100vw;
     height: 400px;
-    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative
-}
-
-#testimonials h2{
-    position: absolute;
-    top:0;
-    left: auto;
+    position: relative;
 }
 
 .testimonial{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .shopgrid{
     display: grid;
     margin-block: 5%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, 296.54px);
     place-content: center;
     place-items: center;
     gap: 3%;
+    height: fit-content;
+}
+
+.pets img, .essentials img{
+    height: 100%;
+    width: 100%;
+    margin-inline: auto;
+    border-radius: 10%;
+    object-fit: cover;
+
+}
+#adopt{
+    height: fit-content;
+    position: relative;
 }
 #footer{
     position:absolute;
     top: auto;
     left: 0;
-    background-color: black;
+    background-color: var(--primary);
     color: white;
-    height: 300px;
+    min-height: fit-content;
     width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33.3%);
+}
+
+#footer .section1, #footer .section2{
+    border-right: solid white 3px;
+    padding: 3%;
+}
+#footer .section3{
+    padding: 3%;
 }
