@@ -150,17 +150,24 @@ video{
     grid-template-columns: repeat(auto-fit, 296.54px);
     place-content: center;
     place-items: center;
-    gap: 3%;
+    gap: 4%;
     height: fit-content;
 }
 
 .pets img, .essentials img{
-    height: 100%;
+    height: 50%;
     width: 100%;
     margin-inline: auto;
     border-radius: 10%;
     object-fit: cover;
 
+}
+.essentials img{
+    object-fit: contain;
+}
+
+.pets, .essentials{
+    height: 100%; width: 100%;
 }
 #adopt{
     height: fit-content;
